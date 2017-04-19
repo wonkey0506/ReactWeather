@@ -1,0 +1,58 @@
+html{
+  margin:0;
+  padding:0;
+}
+body{
+  font-family: Roboto;
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+
+a{
+  color:black;
+  text-decoration: none;
+  margin: 0 5px 0 5px;
+}
+
+a.active{
+  color:white;
+  font-weight:bold;
+}
+#nav{
+  background-color:rgba(70, 130, 180, 0.5);
+}
+
+#nav,#nav h3{
+  padding:0;
+  margin:0;
+  text-align: center;
+}
+
+#weather{
+  border:1px solid black;
+  padding:10px;
+  width: 600px;
+  margin: auto;
+  background-image: url("https://i.gyazo.com/a6e29dcc1dc9f90aa06765be8f6191d8.png");
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+
+
+#weather [type=submit],#weather [type=text]{
+  width:175px;
+  background: rgba(255, 0, 0, 0);
+  border: 0;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  background: white;
+}
+
+
+#weather [type=submit]:active{
+  box-shadow: 1px 1px 3px black;
+}
