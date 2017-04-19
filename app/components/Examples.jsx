@@ -4,10 +4,13 @@ let C = Component;
 export default () => {
   return(
     <div>
+      <h3>HEJ</h3>
       <img src = "https://i.gyazo.com/a6e29dcc1dc9f90aa06765be8f6191d8.png"></img>
     </div>
   );
 }
+
+
 //
 // export default class Examples extends Component{
 //   constructor(){
