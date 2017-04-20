@@ -21,11 +21,10 @@ export default class Form extends Component{
   render(){
     return(
       <div id = "weather">
-        <h1>Get Weather</h1>
         <form onSubmit = {this.handleSubmit.bind(this)}>
           <input type = "text" ref = "location"/>
-          <br/>
-          <input type = "submit"/>
+
+          <button className = "button expanded hollow">Get Weather</button>
         </form>
       </div>
     );

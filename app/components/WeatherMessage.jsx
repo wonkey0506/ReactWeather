@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 
 export default (props) => {
   return(
-      <h4>{props.location} {props.temp}</h4>
+      <h3 className = "text-center">{props.location} {props.temp}</h3>
   );
 }
 

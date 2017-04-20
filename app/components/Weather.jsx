@@ -1,53 +1,59 @@
-import React,{Component} from 'react';
+import React, {Component} from 'react';
 import Form from './Weatherform.jsx';
 import WeatherMessage from './WeatherMessage.jsx';
 import WeatherInfo from '../api/openWeatherMap.jsx';
+import Warning from './warning.jsx';
 
-
-export default class Weather extends Component{
-  constructor(){
+export default class Weather extends Component {
+  constructor() {
     super();
     this.state = {
-      temp:20,
-      location:'Gothenburg',
-      isLoading: false
+      temp: 20,
+      location: 'Gothenburg',
+      isLoading: false,
+      errorMessage: undefined
     }
   }
 
-  handleSearch(location){
+  handleSearch(location) {
     var self = this;
-    this.setState({isLoading:true});
 
 
-
-    WeatherInfo.getTemp(location).then(function(temp) {
-      self.setState({
-        location:location,
-        temp:temp,
-        isLoading:false
+    self.setState({isLoading: true, errorMessage: undefined}, function() {
+      WeatherInfo.getTemp(location).then(function(success) {
+        self.setState({temp:success,isLoading:false,location:location}); // Done
+      }, function(err) {
+        self.setState({errorMessage:err.message,isLoading:false});
       });
-    }),function(err) {
-      self.setState({isLoading:false});
-      console.log(err);
-      alert(err);
-    }
-  }
-  render(){
-    var {isLoading, location, temp} = this.state;
-    
-    function renderMessage() {
-      if(isLoading) {
-        return <h3>Fetching weather..</h3>;
-        } else if(temp && location) {
-          return <WeatherMessage location = {location} temp = {temp}/>;
-        }
-      }
+    })};
 
-      return(
-        <div>
-          <Form onSearch = {this.handleSearch.bind(this)}/>
-          {renderMessage()}
-        </div>
-      );
+
+
+
+    render() {
+      var {test, isLoading, location, temp, errorMessage} = this.state;
+
+      function renderMessage() {
+        if (isLoading) {
+          return <h3 className="text-center">Fetching weather..</h3>;
+          } else if (temp && location) {
+            return <WeatherMessage location={location} temp={temp}/>;
+          }
+        }
+
+        function renderError() {
+          if (typeof errorMessage === 'string') {
+            return (<Warning message={errorMessage}/>);
+          }
+        }
+
+        return (
+          <div>
+            <h1 className="text-center">Get Weather</h1>
+            <Form onSearch={this.handleSearch.bind(this)}/>
+            {renderMessage()}
+            {renderError()}
+          </div>
+        );
+      }
     }
-  }

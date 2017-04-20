@@ -11,14 +11,16 @@ module.exports = {
     var requestUrl = `${OPEN_WEATHER_MAP_URL1}${encodedLocation}${OPEN_WEATHER_MAP_URL2}`;
 
     return new axios.get(requestUrl).then(function(res) {
-      
+
       if (res.data.message && res.data.cod) {
+        console.log("Retuned this");
         return new Error(res.data.message);
       } else {
         return res.data.main.temp;
       }
     }, function(res) {
-      return "res.data.message";
+      let fel  = "error in here";
+      throw new Error(fel);
     });
   }
 }
