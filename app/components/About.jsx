@@ -18,6 +18,7 @@ import React,{Component} from 'react';
 
 export default () => {
     return(
-      <h3>hej</h3>
+      <h3>About</h3>
+      <p>This is the about/information page</p>
     );
 }
