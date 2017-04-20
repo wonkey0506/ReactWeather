@@ -4,8 +4,7 @@ let C = Component;
 export default () => {
   return(
     <div>
-      <h3>saTest</h3>
-      <h1>Exampels page</h1>
+      <h1>Exampels</h1>
       <img src = "https://i.gyazo.com/a6e29dcc1dc9f90aa06765be8f6191d8.png"></img>
     </div>
   );
