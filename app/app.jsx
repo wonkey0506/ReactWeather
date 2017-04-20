@@ -17,13 +17,6 @@ ReactDOM.render(
   <Router history = {BrowserHistory}>
     <div>
       <Main/>
-
-
-
-      <Route path = "/weather" component = {Weather}/>
-      <Route path = "/about" component = {About}/>
-      <Route path = "/examples" component = {Examples}/>
-      <Route exact path = "/" component = {Basic}/>
     </div>
   </Router>
   ,document.getElementById('app'))
