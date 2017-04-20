@@ -9,7 +9,9 @@ import {BrowserRouter as Router,Route,Link,Switch} from 'react-router-dom';
 import { BrowserHistory,hashHistory } from 'react-history';
 import Basic from './components/Basic.jsx';
 
-
+//load foundation
+require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
+$(document).foundation();
 
 ReactDOM.render(
   <Router history = {BrowserHistory}>
