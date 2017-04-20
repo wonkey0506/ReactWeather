@@ -17,8 +17,10 @@ import React,{Component} from 'react';
 
 
 export default () => {
-    return(
+  return(
+    <div>
       <h3>About</h3>
-      <p>This is the about/information page</p>
-    );
+      <p>This is the about page</p>
+    </div>
+  );
 }
