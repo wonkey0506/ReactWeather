@@ -22,7 +22,7 @@ export default class Form extends Component{
     return(
       <div id = "weather">
         <form onSubmit = {this.handleSubmit.bind(this)}>
-          <input type = "text" ref = "location"/>
+          <input type = "search" ref = "location" placeholder = "search weather by city"/>
 
           <button className = "button expanded hollow">Get Weather</button>
         </form>

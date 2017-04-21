@@ -1,0 +1,28 @@
+.page-title {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  color:black;
+}
+
+a,p{
+  color:black !important;
+}
+
+.active{
+  font-weight: bold;
+
+}
+
+body{
+  background-image: url("http://wallpapercave.com/wp/wc1802032.jpg");
+}
+
+button{
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+input[type=search],input[type=search]:focus{
+  outline: none;
+  box-shadow: none;
+}

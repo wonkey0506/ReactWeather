@@ -27,8 +27,7 @@ export default class Main extends Component{
         <Nav/>
         <div className = "row">
           <div className = "columns medium-6 large-4 small-centered">
-            // <Route path = "/weather" mainchange = {this.change} component = {Weather}/>
-            <Route path = "/weather" handler={this.newWeather()}/>
+            <Route path = "/weather" component = {Weather}/>
             <Route path = "/about" component = {About}/>
             <Route path = "/examples" component = {Examples}/>
             <Route exact path = "/" component = {Basic}/>
@@ -38,17 +37,3 @@ export default class Main extends Component{
     );
   }
 }
-//
-// export default class Main extends Component{
-//   constructor(){
-//     super();
-//   }
-//   render(){
-//     return(
-//       <div id = "main">
-//         <Nav/>
-//         <h2 className = "test">Main component</h2>
-//       </div>
-//     );
-//   }
-// }

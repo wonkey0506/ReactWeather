@@ -11,6 +11,8 @@ import Basic from './components/Basic.jsx';
 
 //load foundation
 require('style-loader!css-loader!foundation-sites/dist/css/foundation.min.css');
+//App CSs
+require('style-loader!css-loader!Mycss');
 $(document).foundation();
 
 ReactDOM.render(

@@ -27,7 +27,8 @@ module.exports = {
       root: __dirname,
       Nav: path.resolve(__dirname, 'app/components/Nav.jsx'),
       Weather: path.resolve(__dirname, 'app/components/Weather.jsx'),
-      Owm: path.resolve(__dirname, 'app/api/openWeatherMap.jsx')
+      Owm: path.resolve(__dirname, 'app/api/openWeatherMap.jsx'),
+      Mycss: path.resolve(__dirname, './app/styles/app.css')
     },
     extensions: ['.js', '.jsx']
   },
